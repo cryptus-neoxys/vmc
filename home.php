@@ -23,7 +23,7 @@
         <button class="resolved">Resolved</button>
     </div>
     <div class="complaints_container">
-        <form class="complaint_form" align="center" method="post" action="update_complaint.php">
+        <!-- <form class="complaint_form" align="center" method="post" action="update_complaint.php">
             <div class="side-by-side">
                 <p class="name">Name: Ohm</p>
                 <p class="aadhar">Aadhar: 239482193412</p>
@@ -40,8 +40,47 @@
               <label for="html">Resolved</label><br>
             <input name="id" class="invisible" value="3" type="text">
             <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
-        </form>
+        </form> -->
+
+        <?php
+        include("includes/database.php");
+        include("session.php");
+        $query = mySQLi_query($con, "SELECT * from complaint WHERE resolved = 0 order by id DESC");
+        while ($row = mySQLi_fetch_array($query)) {
+            $id = $row['id'];
+            $name = $row['name'];
+            $aadhar = $row['aadhar'];
+            $gender = $row['gender'];
+            $type = $row['type'];
+            $body = $row['body'];
+            $action = $row['action'];
+        ?>
+
+            <form class="complaint_form" align="center" method="post" action="update_complaint.php">
+                <div class="side-by-side">
+                    <p class="name">Name: <?php echo $name ?></p>
+                    <p class="aadhar">Aadhar: <?php echo $aadhar ?></p>
+                </div>
+                <div class="side-by-side">
+                    <p class="gender">Gender: <?php echo $gender ?></p>
+                    <p class="type">Type of Complaint: <?php echo $type ?></p>
+                </div>
+                <p class="body">Complaint Description: <?php echo $body ?></p>
+                <p>Action</p>
+                <textarea name="action"><?php echo $action ?></textarea>
+                <p>Complaint resolved?</p>
+                <input type="checkbox" id="html" name="resolved" value="HTML">
+                  <label for="html">Resolved</label><br>
+                <input name="id" class="invisible" value="<?php echo $id ?>" type="text">
+                <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
+            </form>
+
+
+        <?php
+        }
+        ?>
     </div>
+
 
 </body>
 <!-- <script src="../js/postcomplaints.js"></script> -->

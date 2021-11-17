@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="./css/projects.css">
   <link rel="stylesheet" href="./css/contactus.css">
   <link rel="icon" href="./images/vmc.jpg" type="image/x-icon">
-  <style>
+
 </head>
 
 <body>
@@ -78,7 +78,7 @@
     <div class="column">
       <h1 style="text-align: center">Vadodara Municipal Corporation</h1>
       <h2 style="text-align: center">By the People. For the People. Of the people.</h2>
-      <a class="admin-login-button bt1" href="login.php">Admin Login</a>
+      <a class="admin-login-button bt1" href="signin.php">Admin Login</a>
       <a class="postcomplaint-button bt1" href="post_complaint.php">Register a complaint</a>
     </div>
     <div class="column home-picture">
