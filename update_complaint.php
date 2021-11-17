@@ -1,9 +1,21 @@
 <?php
 include('includes/database.php');
 
-
+$resolved;
 $id = $_POST["id"];
-$resolved = $_POST["resolved"];
+echo $id;
+if (isset($_POST["resolved"])) {
+  $resolved = 1;
+} else {
+  $resolved = 0;
+}
+echo $resolved;
 $action = $_POST["action"];
+echo $action;
 $update = mysqli_query($con, "UPDATE complaint SET resolved =  $resolved, action = '$action' WHERE id=$id");
-header('location:home.php');
+echo $update;
+
+if ($update) {
+  echo "<script>alert('Update success!'); window.location='home.php'</script>";
+  // header('location:home.php');
+}

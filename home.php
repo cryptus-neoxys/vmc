@@ -18,7 +18,7 @@
 
 <body>
 
-    <form align="center" method="post" action="update_complaint.php">
+    <form align="center" method="POST" action="update_complaint.php">
         <p class="name">Ohm</p>
         <p class="aadhar">239482193412</p>
         <p class="gender">M</p>
@@ -27,12 +27,12 @@
         <input name="id" class="invisible" value="3" type="text">
         <input name="action" class="action" type="text">
         <p>Complaint resolved?</p>
-        <input type="checkbox" id="html" name="resolved" value="HTML">
-          <label for="html">Resolved</label><br>
+        <input type="checkbox" id="html" name="resolved">
+          <label for="resolved">Resolved</label><br>
         <button type="submit" name="submit">Submit</button>
     </form>
 
-    
+
 </body>
 <!-- <script src="../js/postcomplaints.js"></script> -->
 
