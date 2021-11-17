@@ -33,7 +33,10 @@ CREATE TABLE `complaint` (
   `name` varchar(255) DEFAULT NULL,
   `aadhar` varchar(16) NOT NULL,
   `gender` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL
+  `type` varchar(255) NOT NULL,
+  `body` text DEFAULT NULL,
+  `action` varchar(255) DEFAULT NULL,
+  `resolved` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -46,4 +49,4 @@ ALTER TABLE `complaint`
 -- AUTO_INCREMENT for table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
