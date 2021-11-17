@@ -8,24 +8,22 @@ if (mysqli_connect_errno()) {
 	echo mysqli_connect_error();
 }
 
-if (isset($_POST['submit'])) {
-	echo "starting insert ....\n";
-	$name = $_POST['name'];
-	$aadhar = $_POST['aadhar'];
-	$gender = $_POST['gender'];
-	$type = $_POST['type'];
+// if (isset($_POST['submit'])) {
+// }
+echo "starting insert ....\n";
+$name = $_POST['name'];
+$aadhar = $_POST['aadhar'];
+$gender = $_POST['gender'];
+$type = $_POST['type'];
 
-	echo $name . " " . $aadhar;
+echo $name . " " . $aadhar;
 
-	$result = mysqli_query($con, "INSERT INTO complaint (name, aadhar, gender, type) VALUES ('$name', '$aadhar', '$gender', '$type')");
-	if ($result) {
-		echo $result;
-	} else {
-		echo "failed to execute\n";
-	}
-
-	// echo "done ...\n";
-	echo "<script>window.location='index.php'</script>";
+$result = mysqli_query($con, "INSERT INTO complaint (name, aadhar, gender, type) VALUES ('$name', '$aadhar', '$gender', '$type')");
+if ($result) {
+	echo $result;
+} else {
+	echo "<script>alert('Failed to post!'); window.location='post_complaint.php'</script>";
 }
+echo "<script>window.location='index.php'</script>";
 
 ?>
