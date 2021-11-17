@@ -14,19 +14,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/scrollbar.css">
-  <link rel="stylesheet" href="../css/about.css">
-  <link rel="stylesheet" href="../css/projects.css">
-  <link rel="stylesheet" href="../css/contactus.css">
-  <link rel = "icon" href = "../images/vmc.jpg" type = "image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/scrollbar.css">
+  <link rel="stylesheet" href="./css/about.css">
+  <link rel="stylesheet" href="./css/projects.css">
+  <link rel="stylesheet" href="./css/contactus.css">
+  <link rel="icon" href="./images/vmc.jpg" type="image/x-icon">
 </head>
 
 <body>
   <table id="navbar" style="min-width: 320xp;">
     <tr>
       <th>
-        <a id="navbar-brand" style="text-decoration: none;" href="#"><img src="../images/vmc.jpg"></a>
+        <a id="navbar-brand" style="text-decoration: none;" href="#"><img src="./images/vmc.jpg"></a>
       </th>
       <th>
         <a style="text-decoration: none;" href="#"">Home</a>
@@ -105,13 +105,8 @@
       </div>
     </div>
     <div class="project-content">
-      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qh6WYF99ZOE"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <img
-        src="https://affairscloud.com/assets/uploads/2019/12/Phase-III-of-Pradhan-Mantri-Gram-Sadak-Yojana-launched.jpg"
-        alt="PMGSY" />
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qh6WYF99ZOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <img src="https://affairscloud.com/assets/uploads/2019/12/Phase-III-of-Pradhan-Mantri-Gram-Sadak-Yojana-launched.jpg" alt="PMGSY" />
     </div>
   </div>
 

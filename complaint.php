@@ -15,10 +15,11 @@ $name = $_POST['name'];
 $aadhar = $_POST['aadhar'];
 $gender = $_POST['gender'];
 $type = $_POST['type'];
+$body = $_POST['body'];
 
 echo $name . " " . $aadhar;
 
-$result = mysqli_query($con, "INSERT INTO complaint (name, aadhar, gender, type) VALUES ('$name', '$aadhar', '$gender', '$type')");
+$result = mysqli_query($con, "INSERT INTO complaint (name, aadhar, gender, type, body) VALUES ('$name', '$aadhar', '$gender', '$type', '$body')");
 if ($result) {
 	echo $result;
 } else {

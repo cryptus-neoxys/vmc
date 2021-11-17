@@ -67,6 +67,11 @@
             <option value="construction_related">Construction Related</option>
             <option value="other">Other</option>
         </select>
+
+
+        <h3 style="font-size:25px;padding:0px;margin:5px;">Complaint</h3>
+        <input name="body" id="body" style="margin-bottom:20px;" type="textarea" />
+
         <br>
         <button type="submit" name="submit" id="btn-sub">Submit Details</button>
     </form>
