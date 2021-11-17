@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>User Form</title>
 </head>
+
 <body>
     <form action="userform.php" method="post">
         <label>Username<input type="text" name="uname"></label> <br>
@@ -12,19 +14,20 @@
     </form>
 </body>
 <?php
-    if(session_status() != $_PHP_SESSION_ACTIVE) {
-        session_start();
-    }
-    if($_REQUEST["POST"]) {
-        if($_POST["urem"]) {
-            $_SESSION["name"] = $_POST["uname"];
-        } else {
-            $_SESSION["name"] = null;
-        }
+if (session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+}
+if ($_REQUEST["POST"]) {
+    if ($_POST["urem"]) {
+        $_SESSION["name"] = $_POST["uname"];
     } else {
-        if(!empty($_SESSION["name"])) {
-            echo "Recent username: " . $_SESSION["name"];
-        }
+        $_SESSION["name"] = null;
     }
+} else {
+    if (!empty($_SESSION["name"])) {
+        echo "Recent username: " . $_SESSION["name"];
+    }
+}
 ?>
+
 </html>
