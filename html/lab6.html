@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Demo</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <footer>
+      Dev Sharma <br />
+      19BCE0171
+    </footer>
+  </body>
+  <script>
+    let x = parseInt(prompt("Enter a number"));
+
+    document.querySelector("#demo").textContent =
+      `The number you entered, ${x} is:` + (x % 2 ? " odd" : " even");
+  </script>
+</html>

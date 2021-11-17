@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../images/vmc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+</head>
+
+<body>
+    <h1>Vadodara Municipal Corporation</h1>
+    <div class="login-signup" id="login-signup">
+        <button id="login-button" onclick="loginClick()">Login</button>
+        <button id="signup-button" onclick="signUpClick()">Sign-up</button>
+    </div>
+    <div class="login invis">
+        <h2>Email</h2>
+        <input type="email" id="login-email" placeholder="Email-ID">
+        <h2>Password</h2>
+        <input type="password" id="login-password" placeholder="Password">
+        <button onclick="login()">Log In</button>
+    </div>
+    <div class="signup invis">
+        <h2>Aadhar Number</h3>
+            <input type="number" id="signup-aadhar" placeholder="Aadhar Number">
+            <h2>Phone Number</h2>
+            <input type="number" id="signup-phone" placeholder="Phone Number">
+            <h2>Email</h2>
+            <input type="email" id="signup-email" placeholder="Email-ID">
+            <h2>Password</h2>
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Sign Up</button>
+    </div>
+    <div></div>
+
+    <script>
+        async function aniLogin() {
+            document.getElementById('login-button').className = 'shift-left';
+            document.getElementById('signup-button').className = 'shift-right';
+        }
+        async function aniSignUp() {
+            document.getElementById('login-button').className = 'shift-left';
+            document.getElementById('signup-button').className = 'shift-right';
+        }
+        function loginClick() {
+            aniLogin();
+            setTimeout(function () {
+                document.getElementById('login-signup').style.display = 'none';
+                $(".login").toggleClass("invis");
+            }, 1000);
+        }
+        function signUpClick() {
+            aniSignUp();
+            setTimeout(function () {
+                document.getElementById('login-signup').style.display = 'none';
+                $(".signup").toggleClass("invis");
+            }, 1000);
+        }
+    </script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
