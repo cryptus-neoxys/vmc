@@ -14,25 +14,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/vmc.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="../css/scrollbar.css">
-    <link rel="stylesheet" href="../css/postcomplaints.css">
+    <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/postcomplaints.css">
 </head>
 
 <body>
 
-<?php
-// define variables and set to empty values
+    <?php
+    // define variables and set to empty values
 
-$name = $aadhar = $gender = $complaint = "";
+    $name = $aadhar = $gender = $complaint = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$name = $_POST["name"];
-    $aadhar = $_POST["aadhar"];
-    $gender = $_POST["gender"];
-    $complaint = $_POST["complaint"];
-}
-?>
-   <form align="center" method="post" action="complaint.php">
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = $_POST["name"];
+        $aadhar = $_POST["aadhar"];
+        $gender = $_POST["gender"];
+        $complaint = $_POST["complaint"];
+    }
+    ?>
+    <form align="center" method="post" action="complaint.php">
         <div class="postcomplaints-title">
             <div class="banner-behind">
                 <div class="banner-front">
@@ -48,10 +48,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </ul>
         <h3 style="font-size:25px;padding:0px;margin:5px;">Name</h3>
         <input name="name" id="name" style="margin-bottom:20px;" type="textarea" />
-        
+
         <h3 style="font-size:25px;padding:0px;margin:5px;">Aadhar Number</h3>
         <input name="aadhar" id="aadhar" style="margin-bottom:20px;" type="textarea" />
-        
+
         <h3 style="font-size:25px;padding:0px;margin:5px;">Gender</h3>
         <input type="radio" id="male" name="gender" value="male">
           <label for="male">Male</label><br>
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <label for="female">Female</label><br>
         <input type="radio" id="other" name="gender" value="other">
           <label for="other">Other</label><br>
-        
+
         <h3 style="font-size:25px;padding:0px;margin:20px;">Type of complaint</h3>
         <select name="type" id="type">
             <option value="sanitation">Sanitation</option>
@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
         <button type="submit" name="submit" id="btn-sub">Submit Details</button>
     </form>
-    
+
     <h4 align="center">These complaints are overseen by:</h4>
     <dl align="center">
         <dt>Municipal Head Officer</dt>
@@ -81,19 +81,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <footer>
         <br>5th August 2021<br>19BCE0151<br>Ohm Patel<br>
     </footer>
-    
-    <?php
-echo "<h3>Your Input:</h3>";
-echo "<h4>Dev Sharma 19BCE0171</h4>";
-echo $name;
-echo "<br>";
-echo $aadhar;
-echo "<br>";
-echo $gender;
-echo "<br>";
-echo $complaint;
 
-?>
+    <?php
+    echo "<h3>Your Input:</h3>";
+    echo "<h4>Dev Sharma 19BCE0171</h4>";
+    echo $name;
+    echo "<br>";
+    echo $aadhar;
+    echo "<br>";
+    echo $gender;
+    echo "<br>";
+    echo $complaint;
+
+    ?>
 </body>
 <!-- <script src="../js/postcomplaints.js"></script> -->
 
