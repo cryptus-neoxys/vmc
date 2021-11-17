@@ -14,24 +14,34 @@
     <link rel="icon" href="../images/vmc.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
-
-    <form align="center" method="post" action="update_complaint.php">
-        <p class="name">Ohm</p>
-        <p class="aadhar">239482193412</p>
-        <p class="gender">M</p>
-        <p class="type">Sanitation</p>
-        <p class="body">pata nai</p>
-        <input name="id" class="invisible" value="3" type="text">
-        <input name="action" class="action" type="text">
+    <div class="button-types">
+        <button class="unresolved">Unresolved</button>
+        <button class="resolved">Resolved</button>
+    </div>
+    <div class="complaints_container">
+    <form class="complaint_form" align="center" method="post" action="update_complaint.php">
+        <div class="side-by-side">
+        <p class="name">Name: Ohm</p>
+        <p class="aadhar">Aadhar: 239482193412</p>
+        </div>
+        <div class="side-by-side">
+        <p class="gender">Gender: M</p>
+        <p class="type">Type of Complaint: Sanitation</p>
+        </div>
+        <p class="body">Complaint Description: CONTENT HERE</p>
+        <p>Action</p>
+        <textarea name="action"></textarea>
         <p>Complaint resolved?</p>
         <input type="checkbox" id="html" name="resolved" value="HTML">
           <label for="html">Resolved</label><br>
-        <button type="submit" name="submit">Submit</button>
+        <input name="id" class="invisible" value="3" type="text">
+        <button class="update-complaint-button"type="submit" name="submit">Update Complaint</button>
     </form>
-
+    </div>
     
 </body>
 <!-- <script src="../js/postcomplaints.js"></script> -->
