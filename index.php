@@ -20,6 +20,35 @@
   <link rel="stylesheet" href="./css/projects.css">
   <link rel="stylesheet" href="./css/contactus.css">
   <link rel="icon" href="./images/vmc.jpg" type="image/x-icon">
+  <style>
+    .admin-login-button, .postcomplaint-button{
+      text-decoration: none;
+      color:white;
+      background-color:#FFD196;
+      padding: 20px 50px;
+      font-size: 20px;
+      margin: 0px 20px;
+    }
+    .button-container{
+      margin: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .instruction{
+    color:white;
+    text-align: center; padding: 0px 20px;
+    }
+    .project-1{
+      width: 40%;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    .project-2{
+      display: inline-block;
+      width: 40%;
+    }
+  </style>
 
 </head>
 
@@ -78,11 +107,15 @@
     <div class="column">
       <h1 style="text-align: center">Vadodara Municipal Corporation</h1>
       <h2 style="text-align: center">By the People. For the People. Of the people.</h2>
-      <a class="admin-login-button bt1" href="signin.php">Admin Login</a>
-      <a class="postcomplaint-button bt1" href="post_complaint.php">Register a complaint</a>
+      
+      <h2  class="instruction"> Register your complaints through the new Complaint Register Portal. Click the button below to report the issue to a coordinator. </h2>
+      <div class="button-container">
+        <a  class="admin-login-button" href="signin.php">Admin Login</a>
+        <a class="postcomplaint-button" href="post_complaint.php">Register a complaint</a>
+      </div>
     </div>
     <div class="column home-picture">
-      <img src="../images/vmc2.jpg" alt="PMGSY" />
+      <img src="./images/vmc2.jpg" alt="PMGSY" />
     </div>
   </div>
 
@@ -92,13 +125,15 @@
         <h2>Our Vision</h2>
       </div>
     </div>
-    <p class="vision">To provide a clean, hygenic and aesthetically pleasing environment for the citizens through
+    <h3 class="vision">To provide a clean, hygenic and aesthetically pleasing environment for the citizens through
       achieving the best civic standards in the country, preserve the historical character of the city and make it an
-      attractive destination for tourists.</p>
-    <p class="vision">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque facilisis ultricies.
-      Nullam vestibulum odio vitae nibh bibendum, nec vehicula nisl sagittis. Morbi odio turpis, ullamcorper eget dolor
-      nec, finibus molestie est. Aliquam ac dapibus mi. Aliquam metus nisi, luctus ac mauris consectetur, lobortis
-      dictum ipsum.</p>
+      attractive destination for tourists.</h3>
+    <h3 class="vision">The VMC has twelve executive committees apart from the standing committee, which look after the specialized 
+      functions of VMC. These committees include public works committee, water work committee, drainage and sewerage committee, 
+      health committee, town planning committee, estate management committee, recreation and culture committee, electric committee, 
+      and legal committee. Each committee consists of 12 councilors each. The formulation of an additional ward committee is 
+      recommended by the Gujarat Provincial Municipal Corporation Act of 1949 for a city exceeding the population of three lakhs- 
+      which is above the current population of Vadodara.</h3>
   </div>
 
   <div id="projects">
@@ -107,9 +142,14 @@
         <h2>Projects</h2>
       </div>
     </div>
-    <div class="project-content">
+    <h3>The government has taken up several new initiatives to improve the lifestyle of all the people of Vadodara.</h3>
+    <div class="project-content"> 
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qh6WYF99ZOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <img src="https://affairscloud.com/assets/uploads/2019/12/Phase-III-of-Pradhan-Mantri-Gram-Sadak-Yojana-launched.jpg" alt="PMGSY" />
+      <h3 class="project-1">In May 2016, Ministry of Petroleum and Natural Gas (MOPNG), introduced the ‘Pradhan Mantri Ujjwala Yojana’ (PMUY) as a flagship scheme with an objective to make clean cooking fuel such as LPG available to the rural and deprived households which were otherwise using 
+        traditional cooking fuels such as firewood, coal, cow-dung cakes etc. Usage of traditional cooking fuels had detrimental impacts on the health of rural women as well as on the environment.</h3>
+      <h3 class="project-2">Taking inspiration from Mahatma Gandhi who spoke of developing villages in order to develop India, the Prime Minister has set a goal that by 2016, all parliamentarians must target to establish at least one Model village in his or her constituency,
+         with the goal of improving the physical and institutional infrastructure in a holistic way that is centred on the village community.The target under the scheme was to release 8 Crore LPG Connections to the deprived households by March 2020</h3>
     </div>
   </div>
 

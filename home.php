@@ -73,6 +73,7 @@
                   <label for="html">Resolved</label><br>
                 <input name="id" class="invisible" value="<?php echo $id ?>" type="text">
                 <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
+                <hr>
             </form>
 
 
