@@ -25,26 +25,11 @@
     </div>
     <h1 style="text-align: center; color: gray;">Admin Portal</h1>
     <div class="complaints_container">
-        <!-- <form class="complaint_form" align="center" method="post" action="update_complaint.php">
-            <div class="side-by-side">
-                <p class="name">Name: Ohm</p>
-                <p class="aadhar">Aadhar: 239482193412</p>
-            </div>
-            <div class="side-by-side">
-                <p class="gender">Gender: M</p>
-                <p class="type">Type of Complaint: Sanitation</p>
-            </div>
-            <p class="body">Complaint Description: CONTENT HERE</p>
-            <p>Action</p>
-            <textarea name="action"></textarea>
-            <p>Complaint resolved?</p>
-            <input type="checkbox" id="html" name="resolved" value="HTML">
-              <label for="html">Resolved</label><br>
-            <input name="id" class="invisible" value="3" type="text">
-            <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
-        </form> -->
 
         <?php
+        // 17 November 2021
+        // Dev Sharma
+        // 19BCE0171
         include("includes/database.php");
         include("session.php");
         $q = 0;
