@@ -44,6 +44,10 @@
         <h1 class="login-title"> Vadodara Municipal Corporation </h1>
         <h2 class="login-subtitle"> Complaint Resolution portal</h2>
         <form class="login-form" algin="center" method="post" action="signin_form.php">
+            <ul>
+                <li>This page is for registered admins only.</li>
+                <li>User registrations coming soon.</li>
+            </ul>
             <h2 class="postscomplaints-title">Admin Login </h2>
             <h3 style="font-size:25px;padding:0px;margin:5px;">Username</h3>
             <input name="username" id="username" style="margin-bottom:20px; width:350px; padding: 10px;" type="textarea" />
