@@ -21,30 +21,36 @@
   <link rel="stylesheet" href="./css/contactus.css">
   <link rel="icon" href="./images/vmc.jpg" type="image/x-icon">
   <style>
-    .admin-login-button, .postcomplaint-button{
+    .admin-login-button,
+    .postcomplaint-button {
       text-decoration: none;
-      color:white;
-      background-color:#FFD196;
+      color: white;
+      background-color: #FFD196;
       padding: 20px 50px;
       font-size: 20px;
       margin: 0px 20px;
     }
-    .button-container{
+
+    .button-container {
       margin: 40px;
       display: flex;
       flex-direction: row;
       justify-content: center;
     }
-    .instruction{
-    color:white;
-    text-align: center; padding: 0px 20px;
+
+    .instruction {
+      color: white;
+      text-align: center;
+      padding: 0px 20px;
     }
-    .project-1{
+
+    .project-1 {
       width: 40%;
       display: inline-block;
       margin-top: 40px;
     }
-    .project-2{
+
+    .project-2 {
       display: inline-block;
       width: 40%;
     }
@@ -68,7 +74,7 @@
         <a style="text-decoration: none;" href="#projects">Projects</a>
       </th>
       <th>
-        <a style="text-decoration: none;" href="postcomplaints.html" target="_blank">Complaints</a>
+        <a style="text-decoration: none;" href="post_complaint.php" target="_blank">Complaints</a>
       </th>
       <th>
         <a style="text-decoration: none;" href="#footer">Contact Us</a>
@@ -107,10 +113,10 @@
     <div class="column">
       <h1 style="text-align: center">Vadodara Municipal Corporation</h1>
       <h2 style="text-align: center">By the People. For the People. Of the people.</h2>
-      
-      <h2  class="instruction"> Register your complaints through the new Complaint Register Portal. Click the button below to report the issue to a coordinator. </h2>
+
+      <h2 class="instruction"> Register your complaints through the new Complaint Register Portal. Click the button below to report the issue to a coordinator. </h2>
       <div class="button-container">
-        <a  class="admin-login-button" href="signin.php">Admin Login</a>
+        <a class="admin-login-button" href="signin.php">Admin Login</a>
         <a class="postcomplaint-button" href="post_complaint.php">Register a complaint</a>
       </div>
     </div>
@@ -128,14 +134,14 @@
     <h3 class="vision">To provide a clean, hygenic and aesthetically pleasing environment for the citizens through
       achieving the best civic standards in the country, preserve the historical character of the city and make it an
       attractive destination for tourists.</h3>
-    <h3 class="vision">The VMC has twelve executive committees apart from the standing committee, which look after the specialized 
-      functions of VMC. These committees include public works committee, water work committee, drainage and sewerage committee, 
-      health committee, town planning committee, estate management committee, recreation and culture committee, electric committee, 
-      and legal committee. Each committee consists of 12 councilors each. The formulation of an additional ward committee is 
-      recommended by the Gujarat Provincial Municipal Corporation Act of 1949 for a city exceeding the population of three lakhs- 
+    <h3 class="vision">The VMC has twelve executive committees apart from the standing committee, which look after the specialized
+      functions of VMC. These committees include public works committee, water work committee, drainage and sewerage committee,
+      health committee, town planning committee, estate management committee, recreation and culture committee, electric committee,
+      and legal committee. Each committee consists of 12 councilors each. The formulation of an additional ward committee is
+      recommended by the Gujarat Provincial Municipal Corporation Act of 1949 for a city exceeding the population of three lakhs-
       which is above the current population of Vadodara.</h3>
-      <h3 class="vision">The highest body of power in the municipal corporation is the General Board, which is composed of elected members from each ward within the VMC. 
-        There are 19 wards under the VMC, each of which consists 4 seats of councilor which has a 50% reservation of seats for women. There are a total of 76 councilors elected for this VMC term where every councilor is appointed in various committees for a period of one year.</h3>
+    <h3 class="vision">The highest body of power in the municipal corporation is the General Board, which is composed of elected members from each ward within the VMC.
+      There are 19 wards under the VMC, each of which consists 4 seats of councilor which has a 50% reservation of seats for women. There are a total of 76 councilors elected for this VMC term where every councilor is appointed in various committees for a period of one year.</h3>
   </div>
 
   <div id="projects">
@@ -145,13 +151,13 @@
       </div>
     </div>
     <h3>The government has taken up several new initiatives to improve the lifestyle of all the people of Vadodara.</h3>
-    <div class="project-content"> 
+    <div class="project-content">
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qh6WYF99ZOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <img src="https://affairscloud.com/assets/uploads/2019/12/Phase-III-of-Pradhan-Mantri-Gram-Sadak-Yojana-launched.jpg" alt="PMGSY" />
-      <h3 class="project-1">In May 2016, Ministry of Petroleum and Natural Gas (MOPNG), introduced the ‘Pradhan Mantri Ujjwala Yojana’ (PMUY) as a flagship scheme with an objective to make clean cooking fuel such as LPG available to the rural and deprived households which were otherwise using 
+      <h3 class="project-1">In May 2016, Ministry of Petroleum and Natural Gas (MOPNG), introduced the ‘Pradhan Mantri Ujjwala Yojana’ (PMUY) as a flagship scheme with an objective to make clean cooking fuel such as LPG available to the rural and deprived households which were otherwise using
         traditional cooking fuels such as firewood, coal, cow-dung cakes etc. Usage of traditional cooking fuels had detrimental impacts on the health of rural women as well as on the environment.</h3>
       <h3 class="project-2">Taking inspiration from Mahatma Gandhi who spoke of developing villages in order to develop India, the Prime Minister has set a goal that by 2016, all parliamentarians must target to establish at least one Model village in his or her constituency,
-         with the goal of improving the physical and institutional infrastructure in a holistic way that is centred on the village community.The target under the scheme was to release 8 Crore LPG Connections to the deprived households by March 2020</h3>
+        with the goal of improving the physical and institutional infrastructure in a holistic way that is centred on the village community.The target under the scheme was to release 8 Crore LPG Connections to the deprived households by March 2020</h3>
     </div>
   </div>
 
