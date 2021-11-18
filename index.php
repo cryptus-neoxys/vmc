@@ -134,6 +134,8 @@
       and legal committee. Each committee consists of 12 councilors each. The formulation of an additional ward committee is 
       recommended by the Gujarat Provincial Municipal Corporation Act of 1949 for a city exceeding the population of three lakhs- 
       which is above the current population of Vadodara.</h3>
+      <h3 class="vision">The highest body of power in the municipal corporation is the General Board, which is composed of elected members from each ward within the VMC. 
+        There are 19 wards under the VMC, each of which consists 4 seats of councilor which has a 50% reservation of seats for women. There are a total of 76 councilors elected for this VMC term where every councilor is appointed in various committees for a period of one year.</h3>
   </div>
 
   <div id="projects">
