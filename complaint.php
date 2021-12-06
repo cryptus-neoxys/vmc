@@ -1,5 +1,5 @@
 <?php
-// include ('session.php');
+include('session.php');
 ?>
 <?php
 include('includes/database.php');
@@ -11,20 +11,25 @@ if (mysqli_connect_errno()) {
 // if (isset($_POST['submit'])) {
 // }
 echo "starting insert ....\n";
-$name = $_POST['name'];
-$aadhar = $_POST['aadhar'];
-$gender = $_POST['gender'];
 $type = $_POST['type'];
 $body = $_POST['body'];
+$user_id = $_SESSION['id'];
 
-echo $name . " " . $aadhar;
+echo $type . "\nbody" . $body;
 
-$result = mysqli_query($con, "INSERT INTO complaint (name, aadhar, gender, type, body) VALUES ('$name', '$aadhar', '$gender', '$type', '$body')");
-if ($result) {
-	echo $result;
+$sql = mySQLi_query($con, "select * from user WHERE id='$user_id'");
+$row = mySQLi_num_rows($sql);
+if ($row == 0) {
+	echo "<script>alert('Not Authorised'); window.location='signout.php'</script>";
 } else {
-	echo "<script>alert('Failed to post!'); window.location='post_complaint.php'</script>";
+	$sql = "INSERT INTO complaint (type, body, user_id) VALUES ('$type', '$body', '$user_id')";
+	// mySQLi_query($con, $sql);
+	if (mysqli_query($con, $sql)) {
+		echo "Posted complaint successfully";
+		echo "<script>window.location='index.php'</script>";
+	} else {
+		echo "Error: " . $sql . "<br>" . mysqli_error($con);
+	}
 }
-echo "<script>window.location='index.php'</script>";
 
 ?>

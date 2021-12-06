@@ -1,3 +1,7 @@
+<?php
+include('session.php');
+?>
+
 <!DOCTYPE html>
 <!-- 
   12th August 2021 and 19th August 2021
