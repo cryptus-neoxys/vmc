@@ -3,23 +3,14 @@ include('includes/database.php');
 
 if (isset($_POST['submit'])) {
 	$fullname = $_POST['fullName'];
-	echo $fullname;
 	$username = $_POST['username'];
-	echo $username;
 	$gender = $_POST['gender'];
-	echo $gender;
 	$email = $_POST['emailId'];
-	echo $email;
 	$password = $_POST['password'];
-	echo $password;
 	$aadhar = $_POST['aadharNumber'];
-	echo $aadhar;
 	$ward = $_POST['wardNumber'];
-	echo $ward;
 	$gender = $_POST['gender'];
-	echo $gender;
 	$password = $_POST['password'];
-	echo $password;
 
 
 	$sql = mySQLi_query($con, "select * from user WHERE email='$email'");

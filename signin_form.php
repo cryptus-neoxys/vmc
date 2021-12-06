@@ -14,6 +14,7 @@ if ($count == 0) {
 } else if ($count > 0) {
 	session_start();
 	$_SESSION['id'] = $row['id'];
+	$_SESSION['role'] = $row['role'];
 	echo "<script>alert('Logged in successfully!'); window.location='home.php'</script>";
 	// header("location:home.php");
 }
