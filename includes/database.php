@@ -1,3 +1,2 @@
 <?php
-$con = mysqli_connect('localhost','root','','vmc');
-?>
+$con = mysqli_connect('localhost','root','','iwp');

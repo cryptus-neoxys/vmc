@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 07:23 PM
+-- Generation Time: Dec 06, 2021 at 07:15 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `complaint` (
   `id` bigint(20) NOT NULL,
   `body` text NOT NULL,
+  `type` varchar(255) DEFAULT NULL,
   `action` text NOT NULL,
   `resolved` int(11) NOT NULL,
   `user_id` bigint(20) NOT NULL
@@ -51,6 +52,13 @@ CREATE TABLE `user` (
   `ward` int(11) NOT NULL,
   `aadhar` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `fullname`, `gender`, `ward`, `aadhar`) VALUES
+(1, 'dev', 'dev@email.com', '123456', 'Dev Sharma', 'male', 12, '123123123123');
 
 --
 -- Indexes for dumped tables
@@ -86,7 +94,7 @@ ALTER TABLE `complaint`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
