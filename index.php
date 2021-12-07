@@ -74,7 +74,7 @@
         <a style="text-decoration: none;" href="#projects">Projects</a>
       </th>
       <th>
-        <a style="text-decoration: none;" href="post_complaint.php" target="_blank">Complaints</a>
+        <a style="text-decoration: none;" href="post_complaint.php" target="_blank">Post Complaint</a>
       </th>
       <th>
         <a style="text-decoration: none;" href="#footer">Contact Us</a>

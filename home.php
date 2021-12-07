@@ -23,6 +23,7 @@ include("session.php");
 
 <body>
     <div class="button-types">
+        <button class="vmc" style="text-decoration: none; background-color: #e0a90f;padding: 10px 40px;"><a href="index.php">VMC</a></button>
         <button class="unresolved"><a href="home.php">Unresolved</a></button>
         <?php if ($_SESSION['role'] == 'admin') {
             echo '<button class="resolved"><a href="home.php?q=resolved">Resolved</a></button>';
@@ -63,15 +64,17 @@ include("session.php");
 
             $query = mysqli_query($con, "SELECT * from complaint join user on complaint.user_id = user.id WHERE (ward = $ward and resolved = $q) order by complaint.id DESC");
             if (mysqli_num_rows($query) == 0) {
-                echo "<script>alert('No Complaints'); window.location='home.php'</script>";
+                // echo "<script>alert('No Complaints'); window.location='home.php'</script>";
             }
             while ($row = mySQLi_fetch_array($query)) {
-                $id = $row['id'];
+                $id = $row['0'];
+                echo $id . "\t";
                 $name = $row['fullname'];
                 $aadhar = $row['aadhar'];
                 $gender = $row['gender'];
                 $type = $row['type'];
                 $body = $row['body'];
+                echo $body . "\n";
                 $action = $row['action'];
                 $resolved = $row['resolved'];
         ?>
@@ -100,6 +103,9 @@ include("session.php");
             <?php
             }
         } else {
+            // 06 November 2021
+            // Dev Sharma
+            // 19BCE0171
             $result = mysqli_query($con, "SELECT * FROM user WHERE id = '$_SESSION[id]'");
             $admin = mysqli_fetch_array($result);
             $count = mysqli_num_rows($result);
@@ -114,7 +120,7 @@ include("session.php");
 
             $query = mysqli_query($con, "SELECT * from complaint join user on complaint.user_id = user.id WHERE (ward = $ward and resolved = $q) order by complaint.id DESC");
             if (mysqli_num_rows($query) == 0) {
-                echo "<script>alert('No Complaints'); window.location='signout.php'</script>";
+                // echo "<script>alert('No Complaints'); window.location='signout.php'</script>";
             }
             while ($row = mySQLi_fetch_array($query)) {
                 $id = $row['id'];

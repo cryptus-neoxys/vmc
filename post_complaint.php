@@ -23,19 +23,6 @@ include('session.php');
 </head>
 
 <body>
-
-    <?php
-    // define variables and set to empty values
-
-    $name = $aadhar = $gender = $complaint = "";
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST["name"];
-        $aadhar = $_POST["aadhar"];
-        $gender = $_POST["gender"];
-        $complaint = $_POST["complaint"];
-    }
-    ?>
     <form align="center" method="post" action="complaint.php">
         <div class="postcomplaints-title">
             <div class="banner-behind">
@@ -91,18 +78,6 @@ include('session.php');
         <br>5th August 2021<br>19BCE0151<br>Ohm Patel<br>
     </footer>
 
-    <?php
-    echo "<h3>Your Input:</h3>";
-    echo "<h4>Dev Sharma 19BCE0171</h4>";
-    echo $name;
-    echo "<br>";
-    echo $aadhar;
-    echo "<br>";
-    echo $gender;
-    echo "<br>";
-    echo $complaint;
-
-    ?>
 </body>
 <!-- <script src="../js/postcomplaints.js"></script> -->
 
