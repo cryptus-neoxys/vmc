@@ -24,7 +24,11 @@ include("session.php");
 <body>
     <div class="button-types">
         <button class="unresolved"><a href="home.php">Unresolved</a></button>
-        <button class="resolved"><a href="home.php?q=resolved">Resolved</a></button>
+        <?php if ($_SESSION['role'] == 'admin') {
+            echo '<button class="resolved"><a href="home.php?q=resolved">Resolved</a></button>';
+        }
+        ?>
+        <button class="me" style="text-decoration: none; background-color: #17b4df;padding: 10px 40px;"><a href="me.php">Dashboard</a></button>
         <button class="signout" style="text-decoration: none; background-color: #e6807d;padding: 10px 40px;"><a href="signout.php">Sign Out</a></button>
     </div>
     <h1 style="text-align: center; color: gray;"><?php if ($_SESSION['role'] == 'admin') echo "Admin ";
@@ -59,7 +63,7 @@ include("session.php");
 
             $query = mysqli_query($con, "SELECT * from complaint join user on complaint.user_id = user.id WHERE (ward = $ward and resolved = $q) order by complaint.id DESC");
             if (mysqli_num_rows($query) == 0) {
-                echo "<script>alert('No Complaints'); window.location='signout.php'</script>";
+                echo "<script>alert('No Complaints'); window.location='home.php'</script>";
             }
             while ($row = mySQLi_fetch_array($query)) {
                 $id = $row['id'];

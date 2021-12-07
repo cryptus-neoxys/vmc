@@ -65,7 +65,7 @@
         <a id="navbar-brand" style="text-decoration: none;" href="#"><img src="./images/vmc.jpg"></a>
       </th>
       <th>
-        <a style="text-decoration: none;" href="#"">Home</a>
+        <a style="text-decoration: none;" href="home.php"">Home</a>
       </th>
       <th>
         <a style=" text-decoration: none;" href="#about">About</a>
