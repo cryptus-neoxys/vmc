@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <id>1</id>
+    <username>dev</username>
+    <email>dev@email.com</email>
+    <password>123456</password>
+    <fullname>Dev Sharma</fullname>
+    <gender>male</gender>
+    <ward>1</ward>
+    <aadhar>123123123123</aadhar>
+    <role>citizen</role>
+  </row>
+  <row>
+    <id>2</id>
+    <username>admin1</username>
+    <email>admin1@email.com</email>
+    <password>123456</password>
+    <fullname>admin 1</fullname>
+    <gender>female</gender>
+    <ward>1</ward>
+    <aadhar>111111111111</aadhar>
+    <role>admin</role>
+  </row>
+  <row>
+    <id>3</id>
+    <username>admin2</username>
+    <email>admin2@email.com</email>
+    <password>123456</password>
+    <fullname>admin 2</fullname>
+    <gender>male</gender>
+    <ward>2</ward>
+    <aadhar></aadhar>
+    <role>admin</role>
+  </row>
+  <row>
+    <id>4</id>
+    <username>ohm</username>
+    <email>ohm@email.com</email>
+    <password>123456</password>
+    <fullname>ohm patel</fullname>
+    <gender>male</gender>
+    <ward>2</ward>
+    <aadhar>726726726726</aadhar>
+    <role>citizen</role>
+  </row>
+  <row>
+    <id>5</id>
+    <username>aniket</username>
+    <email>aniket@email.com</email>
+    <password>123456</password>
+    <fullname>aniket singh rawat</fullname>
+    <gender>female</gender>
+    <ward>3</ward>
+    <aadhar>927927927927</aadhar>
+    <role>citizen</role>
+  </row>
+</root>

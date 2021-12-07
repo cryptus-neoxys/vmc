@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <id>1</id>
+    <body>Hello World!</body>
+    <type>technological</type>
+    <action>Get action</action>
+    <resolved>0</resolved>
+    <user_id>1</user_id>
+  </row>
+  <row>
+    <id>2</id>
+    <body>ASRs complaint</body>
+    <type>technological</type>
+    <action></action>
+    <resolved>0</resolved>
+    <user_id>5</user_id>
+  </row>
+  <row>
+    <id>3</id>
+    <body>Ohms complaint</body>
+    <type>technological</type>
+    <action>ter</action>
+    <resolved>1</resolved>
+    <user_id>4</user_id>
+  </row>
+</root>

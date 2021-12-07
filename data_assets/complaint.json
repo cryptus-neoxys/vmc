@@ -1,0 +1,26 @@
+[
+ {
+   "id": 1,
+   "body": "Hello World!",
+   "type": "technological",
+   "action": "Get action",
+   "resolved": 0,
+   "user_id": 1
+ },
+ {
+   "id": 2,
+   "body": "ASRs complaint",
+   "type": "technological",
+   "action": "",
+   "resolved": 0,
+   "user_id": 5
+ },
+ {
+   "id": 3,
+   "body": "Ohms complaint",
+   "type": "technological",
+   "action": "ter",
+   "resolved": 1,
+   "user_id": 4
+ }
+]

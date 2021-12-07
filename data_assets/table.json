@@ -1,0 +1,17 @@
+[
+  {
+    "Data Assets": "CSV",
+    "User": "user.csv",
+    "Complain": "complaint.csv"
+  },
+  {
+    "Data Assets": "XML",
+    "User": "user.xml",
+    "Complain": "complaint.xml"
+  },
+  {
+    "Data Assets": "JSON",
+    "User": "user.csv",
+    "Complain": "complaint.csv"
+  }
+]

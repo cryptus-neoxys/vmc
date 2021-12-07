@@ -1,0 +1,57 @@
+[
+ {
+   "id": 1,
+   "username": "dev",
+   "email": "dev@email.com",
+   "password": 123456,
+   "fullname": "Dev Sharma",
+   "gender": "male",
+   "ward": 1,
+   "aadhar": 123123123123,
+   "role": "citizen"
+ },
+ {
+   "id": 2,
+   "username": "admin1",
+   "email": "admin1@email.com",
+   "password": 123456,
+   "fullname": "admin 1",
+   "gender": "female",
+   "ward": 1,
+   "aadhar": 111111111111,
+   "role": "admin"
+ },
+ {
+   "id": 3,
+   "username": "admin2",
+   "email": "admin2@email.com",
+   "password": 123456,
+   "fullname": "admin 2",
+   "gender": "male",
+   "ward": 2,
+   "aadhar": null,
+   "role": "admin"
+ },
+ {
+   "id": 4,
+   "username": "ohm",
+   "email": "ohm@email.com",
+   "password": 123456,
+   "fullname": "ohm patel",
+   "gender": "male",
+   "ward": 2,
+   "aadhar": 726726726726,
+   "role": "citizen"
+ },
+ {
+   "id": 5,
+   "username": "aniket",
+   "email": "aniket@email.com",
+   "password": 123456,
+   "fullname": "aniket singh rawat",
+   "gender": "female",
+   "ward": 3,
+   "aadhar": 927927927927,
+   "role": "citizen"
+ }
+]

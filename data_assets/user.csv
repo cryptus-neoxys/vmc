@@ -1,0 +1,6 @@
+"id","username","email","password","fullname","gender","ward","aadhar","role"
+"1","dev","dev@email.com","123456","Dev Sharma","male","1","123123123123","citizen"
+"2","admin1","admin1@email.com","123456","admin 1","female","1","111111111111","admin"
+"3","admin2","admin2@email.com","123456","admin 2","male","2",,"admin"
+"4","ohm","ohm@email.com","123456","ohm patel","male","2","726726726726","citizen"
+"5","aniket","aniket@email.com","123456","aniket singh rawat","female","3","927927927927","citizen"
