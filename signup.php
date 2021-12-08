@@ -66,7 +66,7 @@
             <h3 style="font-size:25px;padding:0px;margin:5px;">Email ID</h3>
             <input name="emailId" id="emailId" style="margin-bottom:20px; width:350px; padding: 10px;" type="textarea" />
             <h3 style="font-size:25px;padding:0px;margin:5px;">Ward Number</h3>
-            <input name="wardNumber" id="wardNumber" style="margin-bottom:20px; width:350px; padding: 10px;" type="textarea" />
+            <input name="wardNumber" id="wardNumber" style="margin-bottom:20px; width:350px; padding: 10px;" type="number" min="1" max="4" />
             <h3 style="font-size:25px;padding:0px;margin:5px;">Gender</h3>
             <div class="gender-list">
                 <input type="radio" id="male" name="gender" value="male">
