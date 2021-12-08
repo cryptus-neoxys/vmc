@@ -101,7 +101,7 @@ if ($set) {
             <a style="text-decoration: none;" href="post_complaint.php">View Complaints</a>
           </th>
           <th>
-            <a style="text-decoration: none;" href="signout.php">Logout</a>
+            <a style="text-decoration: none;" href="signout.php">Signout</a>
           </th>
         <?php }
       } else { ?>
@@ -150,7 +150,7 @@ if ($set) {
         ?>
             <a class="admin-login-button" href="post_complaint.php">Register a Complaint</a>
           <?php } elseif ($role == 'admin') { ?>
-            <a class="admin-login-button" href="post_complaint.php">View Complaints</a>
+            <a class="admin-login-button" href="home.php">View Complaints</a>
         <?php }
         } ?>
       </div>
@@ -158,8 +158,14 @@ if ($set) {
     <div class="column home-picture">
       <img src="./images/vmc2.jpg" alt="PMGSY" />
       <div class="button-container">
-        <a class="admin-login-button" href="signin.php">Login</a>
-        <a class="postcomplaint-button" href="signup.php">Signup</a>
+        <?php
+        if (!isset($_SESSION['id'])) {
+        ?>
+          <a class="admin-login-button" href="signin.php">Login</a>
+          <a class="postcomplaint-button" href="signup.php">Signup</a>
+        <?php
+        }
+        ?>
       </div>
     </div>
   </div>

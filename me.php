@@ -25,9 +25,15 @@ include("session.php"); ?>
 <body>
   <div class="button-types">
     <button class="vmc" style="text-decoration: none; background-color: #e0a90f;padding: 10px 40px;"><a href="index.php">VMC</a></button>
-    <button class="unresolved"><a href="home.php">Unresolved</a></button>
     <?php if ($_SESSION['role'] == 'admin') {
+      echo '<button class="unresolved"><a href="home.php">Unresolved</a></button>';
+    } else {
+      echo '<button class="unresolved"><a href="home.php">Home</a></button>';
+    }
+    if ($_SESSION['role'] == 'admin') {
       echo '<button class="resolved"><a href="home.php?q=resolved">Resolved</a></button>';
+    } else {
+      echo '<button class="resolved"><a href="post_complaint.php?q=resolved">Post Complaint</a></button>';
     }
     ?>
     <button class="me" style="text-decoration: none; background-color: #17b4df;padding: 10px 40px;"><a href="me.php">Dashboard</a></button>
