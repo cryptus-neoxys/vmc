@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 07:15 PM
+-- Generation Time: Dec 08, 2021 at 04:19 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.6
 
@@ -36,6 +36,15 @@ CREATE TABLE `complaint` (
   `user_id` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `complaint`
+--
+
+INSERT INTO `complaint` (`id`, `body`, `type`, `action`, `resolved`, `user_id`) VALUES
+(1, 'Hello World!', 'technological', 'Get action', 0, 1),
+(2, 'ASRs complaint', 'technological', '', 0, 5),
+(3, 'Ohms complaint', 'technological', 'ter', 1, 4);
+
 -- --------------------------------------------------------
 
 --
@@ -50,15 +59,20 @@ CREATE TABLE `user` (
   `fullname` varchar(255) NOT NULL,
   `gender` varchar(255) NOT NULL,
   `ward` int(11) NOT NULL,
-  `aadhar` varchar(12) NOT NULL
+  `aadhar` varchar(12) NOT NULL,
+  `role` varchar(255) NOT NULL DEFAULT 'citizen'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `email`, `password`, `fullname`, `gender`, `ward`, `aadhar`) VALUES
-(1, 'dev', 'dev@email.com', '123456', 'Dev Sharma', 'male', 12, '123123123123');
+INSERT INTO `user` (`id`, `username`, `email`, `password`, `fullname`, `gender`, `ward`, `aadhar`, `role`) VALUES
+(1, 'dev', 'dev@email.com', '123456', 'Dev Sharma', 'male', 1, '123123123123', 'citizen'),
+(2, 'admin1', 'admin1@email.com', '123456', 'admin 1', 'female', 1, '111111111111', 'admin'),
+(3, 'admin2', 'admin2@email.com', '123456', 'admin 2', 'male', 2, '', 'admin'),
+(4, 'ohm', 'ohm@email.com', '123456', 'ohm patel', 'male', 2, '726726726726', 'citizen'),
+(5, 'aniket', 'aniket@email.com', '123456', 'aniket singh rawat', 'female', 3, '927927927927', 'citizen');
 
 --
 -- Indexes for dumped tables
@@ -88,13 +102,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `complaint`
 --
 ALTER TABLE `complaint`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
