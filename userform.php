@@ -19,7 +19,7 @@ if (session_status() != PHP_SESSION_ACTIVE) {
 }
 if ($_REQUEST["POST"]) {
     if ($_POST["urem"]) {
-        $_SESSION["name"] = $_POST["uname"];
+        $_SESSION["name"] = addslashes($_POST["uname"]);
     } else {
         $_SESSION["name"] = null;
     }

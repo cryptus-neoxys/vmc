@@ -8,11 +8,11 @@ if (mysqli_connect_errno()) {
 	echo mysqli_connect_error();
 }
 
-// if (isset($_POST['submit'])) {
+// if (isset(addslashes($_POST['submit']))) {
 // }
 echo "starting insert ....\n";
-$type = $_POST['type'];
-$body = $_POST['body'];
+$type = addslashes($_POST['type']);
+$body = addslashes($_POST['body']);
 $user_id = $_SESSION['id'];
 
 echo $type . "\nbody" . $body;

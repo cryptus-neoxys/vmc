@@ -2,15 +2,15 @@
 include('includes/database.php');
 
 if (isset($_POST['submit'])) {
-	$fullname = $_POST['fullName'];
-	$username = $_POST['username'];
-	$gender = $_POST['gender'];
-	$email = $_POST['emailId'];
-	$password = $_POST['password'];
-	$aadhar = $_POST['aadharNumber'];
-	$ward = $_POST['wardNumber'];
-	$gender = $_POST['gender'];
-	$password = $_POST['password'];
+	$fullname = addslashes($_POST['fullName']);
+	$username = addslashes($_POST['username']);
+	$gender = addslashes($_POST['gender']);
+	$email = addslashes($_POST['emailId']);
+	$password = addslashes($_POST['password']);
+	$aadhar = addslashes($_POST['aadharNumber']);
+	$ward = addslashes($_POST['wardNumber']);
+	$gender = addslashes($_POST['gender']);
+	$password = addslashes($_POST['password']);
 
 
 	$sql = mySQLi_query($con, "select * from user WHERE email='$email'");
@@ -25,7 +25,11 @@ if (isset($_POST['submit'])) {
 			echo "New record created successfully";
 			echo "<script>alert('Account successfully created!'); window.location='signin.php'</script>";
 		} else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($con);
+			$err = mysqli_error($con);
+			echo "Error: " . $err;
+			echo "<script>alert('Could not create account!Error'); window.location='signup.php'</script>";
+			// echo "Error: " . mysqli_error($con) . "<br>";
+			// " . mysqli_error($con) . "
 		}
 	}
 }

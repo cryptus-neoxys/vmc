@@ -3,8 +3,8 @@ include('includes/database.php');
 
 if (isset($_POST['submit'])) {
 }
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = addslashes($_POST['username']);
+$password = addslashes($_POST['password']);
 $result = mysqli_query($con, "SELECT * FROM user WHERE username = '$username' and password='$password'");
 
 $row = mysqli_fetch_array($result);

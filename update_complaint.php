@@ -2,7 +2,7 @@
 include('includes/database.php');
 
 $resolved;
-$id = $_POST["id"];
+$id = addslashes($_POST["id"]);
 echo $id;
 if (isset($_POST["resolved"])) {
   $resolved = 1;
@@ -10,7 +10,7 @@ if (isset($_POST["resolved"])) {
   $resolved = 0;
 }
 echo $resolved;
-$action = $_POST["action"];
+$action = addslashes($_POST["action"]);
 echo $action;
 $update = mysqli_query($con, "UPDATE complaint SET resolved =  $resolved, action = '$action' WHERE id=$id");
 echo $update;
