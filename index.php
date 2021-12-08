@@ -1,12 +1,12 @@
 <?php
 session_start();
-$set=isset($_SESSION['id']);
-if($set){
-include("includes/database.php");
-        $id = $_SESSION['id'];
-        $query = mysqli_query($con, "SELECT * FROM user WHERE id = $id;");
-        $row = mysqli_fetch_array($query);
-        $role = $row['role'];
+$set = isset($_SESSION['id']);
+if ($set) {
+  include("includes/database.php");
+  $id = $_SESSION['id'];
+  $query = mysqli_query($con, "SELECT * FROM user WHERE id = $id;");
+  $row = mysqli_fetch_array($query);
+  $role = $row['role'];
 }
 ?>
 <!DOCTYPE html>
@@ -87,26 +87,27 @@ include("includes/database.php");
       <th>
         <a style="text-decoration: none;" href="#footer">Contact Us</a>
       </th>
-      <?php if($set){ 
-        if($role=='citizen'){
-        ?>
-      <th>
-        <a style="text-decoration: none;" href="post_complaint.php">Post Complaint</a>
-      </th>
-      <th>
-        <a style="text-decoration: none;" href="signout.php">Logout</a>
-      </th>
-        <?php }elseif($role=='admin'){ ?>
+      <?php if ($set) {
+        if ($role == 'citizen') {
+      ?>
           <th>
-        <a style="text-decoration: none;" href="post_complaint.php">View Complaints</a>
-      </th>
-      <th>
-        <a style="text-decoration: none;" href="signout.php">Logout</a>
-      </th>
-      <?php }}else{?>
+            <a style="text-decoration: none;" href="post_complaint.php">Post Complaint</a>
+          </th>
+          <th>
+            <a style="text-decoration: none;" href="signout.php">Logout</a>
+          </th>
+        <?php } elseif ($role == 'admin') { ?>
+          <th>
+            <a style="text-decoration: none;" href="post_complaint.php">View Complaints</a>
+          </th>
+          <th>
+            <a style="text-decoration: none;" href="signout.php">Logout</a>
+          </th>
+        <?php }
+      } else { ?>
         <th>
-        <a style="text-decoration: none;" href="signin.php">Login</a>
-      </th>
+          <a style="text-decoration: none;" href="signin.php">Login</a>
+        </th>
       <?php } ?>
     </tr>
   </table>
@@ -144,20 +145,21 @@ include("includes/database.php");
       <h2 style="text-align: center">By the People. For the People. Of the people.</h2>
       <h2 class="instruction"> Register your complaints through the new Complaint Register Portal. Click the button below to report the issue to a coordinator. </h2>
       <div class="button-container">
-        <?php if($set){
-        if($role=='citizen'){
+        <?php if ($set) {
+          if ($role == 'citizen') {
         ?>
-        <a class="admin-login-button" href="post_complaint.php">Register a Complaint</a>
-        <?php }elseif($role=='admin'){ ?>
-          <a class="admin-login-button" href="post_complaint.php">View Complaints</a>
-          <?php } }?>
+            <a class="admin-login-button" href="post_complaint.php">Register a Complaint</a>
+          <?php } elseif ($role == 'admin') { ?>
+            <a class="admin-login-button" href="post_complaint.php">View Complaints</a>
+        <?php }
+        } ?>
       </div>
     </div>
     <div class="column home-picture">
       <img src="./images/vmc2.jpg" alt="PMGSY" />
       <div class="button-container">
         <a class="admin-login-button" href="signin.php">Login</a>
-        <a class="postcomplaint-button" href="post_complaint.php">Signup</a>
+        <a class="postcomplaint-button" href="signup.php">Signup</a>
       </div>
     </div>
   </div>
