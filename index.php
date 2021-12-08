@@ -94,6 +94,9 @@ if ($set) {
             <a style="text-decoration: none;" href="post_complaint.php">Post Complaint</a>
           </th>
           <th>
+            <a style="text-decoration: none;" href="me.php">Dashboard</a>
+          </th>
+          <th>
             <a style="text-decoration: none;" href="signout.php">Logout</a>
           </th>
         <?php } elseif ($role == 'admin') { ?>

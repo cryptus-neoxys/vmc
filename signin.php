@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/vmc.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../css/scrollbar.css">
-    <link rel="stylesheet" href="./css/postcomplaints.css">
+    <link rel="stylesheet" href="./css/style.css">
     <style>
         .login-wrapper {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 100px;
         }
 
         .login-subtitle {
@@ -30,6 +31,15 @@
             margin: auto;
             background-color: #FFD196;
         }
+        #navbar{
+            background-color: #EC9F05;
+            margin-top:0;
+            padding-top:15px;
+        }
+        a{
+            color:white !important;
+            border-color: white !important;
+        }
     </style>
 </head>
 
@@ -40,6 +50,29 @@
 
 
 <body>
+<table id="navbar" style="min-width: 320xp;">
+    <tr>
+      <th>
+        <a id="navbar-brand" style="text-decoration: none;" href="#"><img src="./images/vmc.jpg"></a>
+      </th>
+      <th>
+        <a style="text-decoration: none;" href="home.php"">Home</a>
+      </th>
+      <th>
+        <a style=" text-decoration: none;" href="./index.php#about">About</a>
+      </th>
+      <th>
+        <a style="text-decoration: none;" href="./index.php#projects">Projects</a>
+      </th>
+      <th>
+        <a style="text-decoration: none;" href="./index.php#contactus">Contact Us</a>
+      </th>
+        <th>
+          <a style="text-decoration: none;" href="signup.php">Signup</a>
+        </th>
+      
+    </tr>
+  </table>
     <div class="login-wrapper">
         <h1 class="login-title"> Vadodara Municipal Corporation </h1>
         <h2 class="login-subtitle"> Complaint Resolution portal</h2>

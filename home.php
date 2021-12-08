@@ -19,6 +19,30 @@ include("session.php");
     <link rel="stylesheet" href="./css/scrollbar.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .complaint_form {
+            border-radius: 10px;
+            padding: 20px 50px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .complaints_container {
+            background-color: white;
+            display: inline-block;
+
+        }
+
+        .card {
+            display: inline-block;
+            margin: 50px;
+        }
+
+        body {
+            background-color: #ffd196;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +65,7 @@ include("session.php");
     </div>
     <h1 style="text-align: center; color: gray;"><?php if ($_SESSION['role'] == 'admin') echo "Admin ";
                                                     else echo "User " ?>Portal</h1>
-    <div class="complaints_container">
+    <div class="complaints_container" align="center">
 
         <?php
         // 17 November 2021
@@ -75,39 +99,50 @@ include("session.php");
             }
             while ($row = mySQLi_fetch_array($query)) {
                 $id = $row['0'];
-                echo $id . "\t";
                 $name = $row['fullname'];
                 $aadhar = $row['aadhar'];
                 $gender = $row['gender'];
                 $type = $row['type'];
                 $body = $row['body'];
-                echo $body . "\n";
                 $action = $row['action'];
                 $resolved = $row['resolved'];
         ?>
 
                 <form class="complaint_form" align="center" method="post" action="update_complaint.php">
-                    <div class="side-by-side">
-                        <p class="name">Name: <?php echo $name ?></p>
-                        <p class="aadhar">Aadhar: <?php echo $aadhar ?></p>
+
+
+
+                    <div class="card border-<?php if ($resolved == 1) echo "success";
+                                            else echo "danger" ?> mb-3" style="">
+                        <div class="card-header text-<?php if ($resolved == 1) echo "success";
+                                                        else echo "danger" ?>" style="font-size:20px;font-weight:bold;"><?php echo "Complaint - " . $type ?></div>
+                        <div class="card-body text-<?php if ($resolved == 1) echo "success";
+                                                    else echo "danger" ?>">
+
+                            <h5 class="card-title"><?php echo $body ?></h5>
+                            <div class="side-by-side">
+                                <p class="name">Name: <?php echo $name ?></p>
+                                <p class="aadhar">Aadhar: <?php echo $aadhar ?></p>
+                            </div>
+                            <div class="side-by-side">
+                                <p class="gender">Gender: <?php echo $gender ?></p>
+                                <p class="type">Type of Complaint: <?php echo $type ?></p>
+                            </div>
+                            <p class="body">Complaint Description: <?php echo $body ?></p>
+                            <p>Action</p>
+                            <textarea class="action" name="action"><?php echo $action ?></textarea>
+                            <p>Complaint resolved?</p>
+                            <input type="checkbox" id="resolved" name="resolved" <?php if ($resolved == 1) echo "checked" ?>>
+                              <label for="html">Resolved</label><br>
+                            <input name="id" class="invisible" value="<?php echo $id ?>" type="text">
+                            <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
+                        </div>
                     </div>
-                    <div class="side-by-side">
-                        <p class="gender">Gender: <?php echo $gender ?></p>
-                        <p class="type">Type of Complaint: <?php echo $type ?></p>
-                    </div>
-                    <p class="body">Complaint Description: <?php echo $body ?></p>
-                    <p>Action</p>
-                    <textarea class="action" name="action"><?php echo $action ?></textarea>
-                    <p>Complaint resolved?</p>
-                    <input type="checkbox" id="resolved" name="resolved" <?php if ($resolved == 1) echo "checked" ?>>
-                      <label for="html">Resolved</label><br>
-                    <input name="id" class="invisible" value="<?php echo $id ?>" type="text">
-                    <button class="update-complaint-button" type="submit" name="submit">Update Complaint</button>
-                    <hr>
+
                 </form>
 
-
-            <?php
+                <form class="complaint_form" align="center">
+                <?php
             }
         } else {
             // 06 November 2021
@@ -138,28 +173,27 @@ include("session.php");
                 $body = $row['body'];
                 $action = $row['action'];
                 $resolved = $row['resolved'];
-            ?>
+                ?>
 
-                <form class="complaint_form" align="center">
-                    <div class="side-by-side">
-                        <p class="name">Name: <?php echo $name ?></p>
-                        <p class="aadhar">Aadhar: <?php echo $aadhar ?></p>
+
+                    <div class="card border-<?php if ($resolved == 1) echo "success";
+                                            else echo "danger" ?> mb-3" style="width:500px;height:200px;">
+                        <div class="card-header text-<?php if ($resolved == 1) echo "success";
+                                                        else echo "danger" ?>"><?php echo "Complaint - " . $type ?></div>
+                        <div class="card-body text-<?php if ($resolved == 1) echo "success";
+                                                    else echo "danger" ?>">
+                            <h5 class="card-title"><?php echo $body ?></h5>
+                            <p class="card-text">Action: <?php echo $action ?></p>
+                            <p class="card-text">Complaint status: <?php if ($resolved == 1) echo "Resolved";
+                                                                    else echo "Unresolved" ?></p>
+                        </div>
                     </div>
-                    <div class="side-by-side">
-                        <p class="gender">Gender: <?php echo $gender ?></p>
-                        <p class="type">Type of Complaint: <?php echo $type ?></p>
-                    </div>
-                    <p class="body">Complaint Description: <?php echo $body ?></p>
-                    <p>Action: <?php echo $action ?></p>
-                    <p>Complaint status: <?php if ($resolved == 1) echo "Resolved";
-                                            else echo "Unresolved" ?></p>
-                    <hr>
-                </form>
-        <?php
+
+            <?php
             }
         }
-        ?>
-
+            ?>
+                </form>
     </div>
 
 
