@@ -20,6 +20,22 @@ include("session.php"); ?>
   <link rel="stylesheet" href="./css/scrollbar.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    .complaint_form {
+      border-radius: 10px;
+      padding: 20px 50px;
+      display: inline-block;
+      width: 100%;
+    }
+    .card{
+      display: inline-block;
+      margin: 50px;
+    }
+    body {
+      background-color: #ffd196;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,7 +51,7 @@ include("session.php"); ?>
   </div>
   <h1 style="text-align: center; color: gray;">User Dashboard</h1>
   <div class="complaints_container">
-
+  <form class="complaint_form" align="center">
     <?php
 
     $result = mysqli_query($con, "SELECT * FROM user WHERE id = '$_SESSION[id]'");
@@ -63,8 +79,8 @@ include("session.php"); ?>
       $resolved = $row['resolved'];
     ?>
 
-      <form class="complaint_form" align="center">
-        <div class="side-by-side">
+      
+        <!-- <div class="side-by-side">
           <p class="name">Name: <?php echo $name ?></p>
           <p class="aadhar">Aadhar: <?php echo $aadhar ?></p>
         </div>
@@ -76,8 +92,19 @@ include("session.php"); ?>
         <p>Action: <?php echo $action ?></p>
         <p>Complaint status: <?php if ($resolved == 1) echo "Resolved";
                               else echo "Unresolved" ?></p>
-        <hr>
-      </form>
+        <hr> -->
+        <div class="card border-<?php if($resolved==1)echo "success";else echo "danger" ?> mb-3" style="width:500px;height:200px;">
+          <div class="card-header text-<?php if($resolved==1)echo "success";else echo "danger" ?>"><?php echo "Complaint - ".$type ?></div>
+          <div class="card-body text-<?php if($resolved==1)echo "success";else echo "danger" ?>">
+            <h5 class="card-title"><?php echo $body ?></h5>
+            <p class="card-text">Action: <?php echo $action ?></p>
+            <p class="card-text">Complaint status: <?php if ($resolved == 1) echo "Resolved";
+                              else echo "Unresolved" ?></p>
+          </div>
+        </div>
     <?php
     }
     ?>
+    </form>
+  </div>
+</body>
