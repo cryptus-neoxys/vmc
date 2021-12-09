@@ -19,10 +19,69 @@ include('session.php');
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../images/vmc.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./css/scrollbar.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/postcomplaints.css">
+    <style>
+        .login-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .login-subtitle {
+            color: #eeb034;
+            margin-bottom: 50px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 80px;
+            align-items: center;
+            margin: auto;
+            background-color: #FFD196;
+        }
+
+        #navbar {
+            background-color: #EC9F05;
+            margin: 0 0 2rem 0;
+            padding-top: 15px;
+        }
+
+        a {
+            color: white !important;
+            border-color: white !important;
+        }
+    </style>
 </head>
 
 <body>
+
+    <table id="navbar" style="min-width: 320xp;">
+        <tr>
+            <th>
+                <a id="navbar-brand" style="text-decoration: none;" href="#"><img src="./images/vmc.jpg"></a>
+            </th>
+            <th>
+                <a style="text-decoration: none;" href="home.php"">Home</a>
+      </th>
+      <th>
+        <a style=" text-decoration: none;" href="./index.php#about">About</a>
+            </th>
+            <th>
+                <a style="text-decoration: none;" href="./index.php#projects">Projects</a>
+            </th>
+            <th>
+                <a style="text-decoration: none;" href="./index.php#contactus">Contact Us</a>
+            </th>
+            <th>
+                <a style="text-decoration: none;" href="signup.php">Signup</a>
+            </th>
+
+        </tr>
+    </table>
     <form align="center" method="post" action="complaint.php">
         <div class="postcomplaints-title">
             <div class="banner-behind">
@@ -37,19 +96,6 @@ include('session.php');
             <li>Use Capital letters for all the details</li>
             <li>Do not submit multiple complaints for the same issue</li>
         </ul>
-        <h3 style="font-size:25px;padding:0px;margin:5px;">Name</h3>
-        <input name="name" id="name" style="margin-bottom:20px;" type="textarea" />
-
-        <h3 style="font-size:25px;padding:0px;margin:5px;">Aadhar Number</h3>
-        <input name="aadhar" id="aadhar" style="margin-bottom:20px;" type="textarea" />
-
-        <h3 style="font-size:25px;padding:0px;margin:5px;">Gender</h3>
-        <input type="radio" id="male" name="gender" value="male">
-          <label for="male">Male</label><br>
-          <input type="radio" id="female" name="gender" value="female">
-          <label for="female">Female</label><br>
-        <input type="radio" id="other" name="gender" value="other">
-          <label for="other">Other</label><br>
 
         <h3 style="font-size:25px;padding:0px;margin:20px;">Type of complaint</h3>
         <select name="type" id="type">
